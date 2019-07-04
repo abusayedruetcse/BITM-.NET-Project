@@ -10,7 +10,7 @@ namespace StockManagementSystem.Repository
 {
     public class CategoryRepository
     {
-        string connectionString = @"Server=TUHIN-PC\SQLEXPRESS;Database=StockManagementDB;Integrated Security=True";
+        string connectionString;
         SqlConnection sqlConnection;
         string commandString;
         SqlCommand sqlCommand;
@@ -19,6 +19,8 @@ namespace StockManagementSystem.Repository
 
         public CategoryRepository()
         {
+            connectionString = @"Server=PC-301-17\SQLEXPRESS ; Database=StockManagementDB  ;Integrated Security=True  ";
+            //connectionString = @"Server=TUHIN-PC\SQLEXPRESS;Database=StockManagementDB;Integrated Security=True";
             sqlConnection = new SqlConnection(connectionString);
         }
         public int Update(Category category)
