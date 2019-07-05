@@ -1,4 +1,4 @@
-CREATE DATABASE StockManagementDB
+.CREATE DATABASE StockManagementDB
 --DROP DATABASE StockManagementDB
 USE StockManagementDB
 CREATE TABLE Categories

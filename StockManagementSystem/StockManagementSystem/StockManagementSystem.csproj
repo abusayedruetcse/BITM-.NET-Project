@@ -64,7 +64,7 @@
     <Compile Include="MenuUi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuUi.Designer.cs">
+    <Compile Include="MenuUi.designer.cs">
       <DependentUpon>MenuUi.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Category.cs" />
