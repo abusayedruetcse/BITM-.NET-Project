@@ -28,22 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.saveButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.categoryComboBox = new System.Windows.Forms.ComboBox();
+            this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.companyComboBox = new System.Windows.Forms.ComboBox();
+            this.companyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.itemNameTextBox = new System.Windows.Forms.TextBox();
             this.reorderLevelTextBox = new System.Windows.Forms.TextBox();
             this.messageLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // saveButton
             // 
             this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveButton.Location = new System.Drawing.Point(264, 304);
+            this.saveButton.Location = new System.Drawing.Point(355, 270);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(109, 38);
             this.saveButton.TabIndex = 0;
@@ -93,21 +98,35 @@
             // 
             // categoryComboBox
             // 
+            this.categoryComboBox.DataSource = this.categoryBindingSource;
+            this.categoryComboBox.DisplayMember = "Name";
             this.categoryComboBox.FormattingEnabled = true;
             this.categoryComboBox.Location = new System.Drawing.Point(213, 67);
             this.categoryComboBox.Name = "categoryComboBox";
             this.categoryComboBox.Size = new System.Drawing.Size(251, 21);
             this.categoryComboBox.TabIndex = 5;
-            this.categoryComboBox.SelectedIndexChanged += new System.EventHandler(this.categoryComboBox_SelectedIndexChanged);
+            this.categoryComboBox.ValueMember = "ID";
+            this.categoryComboBox.Click += new System.EventHandler(this.categoryComboBox_Click);
+            // 
+            // categoryBindingSource
+            // 
+            this.categoryBindingSource.DataSource = typeof(StockManagementSystem.Models.Category);
             // 
             // companyComboBox
             // 
+            this.companyComboBox.DataSource = this.companyBindingSource;
+            this.companyComboBox.DisplayMember = "Name";
             this.companyComboBox.FormattingEnabled = true;
             this.companyComboBox.Location = new System.Drawing.Point(213, 121);
             this.companyComboBox.Name = "companyComboBox";
             this.companyComboBox.Size = new System.Drawing.Size(251, 21);
             this.companyComboBox.TabIndex = 6;
-            this.companyComboBox.SelectedIndexChanged += new System.EventHandler(this.companyComboBox_SelectedIndexChanged);
+            this.companyComboBox.ValueMember = "ID";
+            this.companyComboBox.Click += new System.EventHandler(this.companyComboBox_Click);
+            // 
+            // companyBindingSource
+            // 
+            this.companyBindingSource.DataSource = typeof(StockManagementSystem.Models.Company);
             // 
             // itemNameTextBox
             // 
@@ -148,6 +167,8 @@
             this.Controls.Add(this.saveButton);
             this.Name = "ItemUi";
             this.Text = "Item Setup";
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,5 +186,7 @@
         private System.Windows.Forms.TextBox itemNameTextBox;
         private System.Windows.Forms.TextBox reorderLevelTextBox;
         private System.Windows.Forms.Label messageLabel;
+        private System.Windows.Forms.BindingSource categoryBindingSource;
+        private System.Windows.Forms.BindingSource companyBindingSource;
     }
 }

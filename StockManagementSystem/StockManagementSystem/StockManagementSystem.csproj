@@ -47,26 +47,47 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\ItemManager.cs" />
-    <Compile Include="BLL\ViewManager.cs" />
     <Compile Include="ItemUi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ItemUi.Designer.cs">
       <DependentUpon>ItemUi.cs</DependentUpon>
     </Compile>
+    <Compile Include="BLL\CategoryManager.cs" />
+    <Compile Include="BLL\CompanyManager.cs" />
+    <Compile Include="BLL\ViewManager.cs" />
+    <Compile Include="CategoryUi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoryUi.Designer.cs">
+      <DependentUpon>CategoryUi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyUi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompanyUi.Designer.cs">
+      <DependentUpon>CompanyUi.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuUi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuUi.Designer.cs">
+    <Compile Include="MenuUi.designer.cs">
       <DependentUpon>MenuUi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Company.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\ItemRepository.cs" />
-    <Compile Include="Repository\ViewRepository.cs" />
     <EmbeddedResource Include="ItemUi.resx">
       <DependentUpon>ItemUi.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Repository\CategoryRepository.cs" />
+    <Compile Include="Repository\CompanyRepository.cs" />
+    <Compile Include="Repository\ViewRepository.cs" />
+    <EmbeddedResource Include="CompanyUi.resx">
+      <DependentUpon>CompanyUi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuUi.resx">
       <DependentUpon>MenuUi.cs</DependentUpon>
@@ -80,6 +101,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\StockManagementSystem.Models.Category.datasource" />
+    <None Include="Properties\DataSources\StockManagementSystem.Models.Company.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -86,14 +86,15 @@ namespace StockManagementSystem
             }
         }
 
-        private void categoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void categoryComboBox_Click(object sender, EventArgs e)
         {
             categoryComboBox.DataSource = _itemManager.ComboxBoxWithSelect("Categories");
         }
 
-        private void companyComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void companyComboBox_Click(object sender, EventArgs e)
         {
             companyComboBox.DataSource = _itemManager.ComboxBoxWithSelect("Companies");
         }
+        
     }
 }
