@@ -13,7 +13,7 @@ using StockManagementSystem.StockManagement.Bll;
 
 namespace StockManagementSystem.Screens
 {
-    public partial class StockInForm : TemplateForm
+    public partial class StockInForm : Form
     {
         private StockInManager _stockInManager;
         private StockIn _stockIn;
@@ -100,7 +100,7 @@ namespace StockManagementSystem.Screens
                         return;
                     }
                     _stockIn.Date = dateTimePickerUserDefineDate.Value.ToString("yyyy-MM-dd");
-                    _stockIn.ItemId = Convert.ToInt32(comboBoxItemName.SelectedValue);
+                    _stockIn.ID = Convert.ToInt32(comboBoxItemName.SelectedValue);
                     if (String.IsNullOrEmpty(textBoxStockInQuantity.Text))
                     {
                         MessageBox.Show("Enter a quantity!");
@@ -110,7 +110,7 @@ namespace StockManagementSystem.Screens
                     AddStockIn(_stockIn);
 
                     //update avaiableQuantity
-                    _item.ItemId = _stockIn.ItemId;
+                    _item.ID = _stockIn.ID;
                     _dataTable = _stockInManager.GetItemById(_item);
                     int currentQuantity = Convert.ToInt32(_dataTable.Rows[0]["AvailableQuantity"]);
                     _item.AvailableQuantity = currentQuantity + _stockIn.Quantity;
@@ -161,7 +161,7 @@ namespace StockManagementSystem.Screens
 
         private void comboBoxCompanyName_Click(object sender, EventArgs e)
         {
-            _item.CompanyId = Convert.ToInt32(comboBoxCompanyName.SelectedValue);
+            _item.CompanyID = Convert.ToInt32(comboBoxCompanyName.SelectedValue);
         }
 
         private void comboBoxCategoryName_Click(object sender, EventArgs e)
@@ -171,7 +171,7 @@ namespace StockManagementSystem.Screens
                 MessageBox.Show("Select company!");
                 return;
             }
-            _item.CategoryId = Convert.ToInt32(comboBoxCategoryName.SelectedValue);
+            _item.CategoryID = Convert.ToInt32(comboBoxCategoryName.SelectedValue);
         }
 
         private void comboBoxItemName_Click(object sender, EventArgs e)
@@ -205,7 +205,7 @@ namespace StockManagementSystem.Screens
         private void dataGridViewStockInAllRecord_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int currentQuantity = Convert.ToInt32(dataGridViewStockInAllRecord.Rows[e.RowIndex].Cells["quantityDataGridViewTextBoxColumn"].Value);
-            _item.ItemId = Convert.ToInt32(dataGridViewStockInAllRecord.Rows[e.RowIndex].Cells["itemIdDataGridViewTextBoxColumn"].Value);
+            _item.ID = Convert.ToInt32(dataGridViewStockInAllRecord.Rows[e.RowIndex].Cells["itemIdDataGridViewTextBoxColumn"].Value);
             _dataTable = _stockInManager.GetItemById(_item);
 
             //display into textbox
@@ -225,7 +225,7 @@ namespace StockManagementSystem.Screens
             _item.AvailableQuantity -= currentQuantity; //reduce currentQuantity
 
             //updating for StockIn
-            _stockIn.StockInId = Convert.ToInt32(dataGridViewStockInAllRecord.Rows[e.RowIndex].Cells["stockInIdDataGridViewTextBoxColumn"].Value);
+            _stockIn.ID = Convert.ToInt32(dataGridViewStockInAllRecord.Rows[e.RowIndex].Cells["stockInIdDataGridViewTextBoxColumn"].Value);
         }
     }
 }

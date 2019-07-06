@@ -88,7 +88,7 @@
             // 
             // companyBindingSource
             // 
-            this.companyBindingSource.DataSource = typeof(StockManagementSystem.Models.Company);
+           // this.companyBindingSource.DataSource = typeof(StockManagementSystem.Models.Company);
             // 
             // SaveButton
             // 

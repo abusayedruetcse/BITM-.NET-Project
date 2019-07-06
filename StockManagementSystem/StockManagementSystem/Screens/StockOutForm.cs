@@ -72,10 +72,10 @@ namespace StockManagementSystem.Screens
                 _stockOut.CompanyName = comboBoxCompanyName.Text;
                 _stockOut.Quantity = Convert.ToInt32(textBoxStockOutQuantity.Text);
                 _item.Name = comboBoxItemName.Text;
-                _item.CategoryId = Convert.ToInt32(comboBoxCategoryName.SelectedValue);
-                _item.CompanyId = Convert.ToInt32(comboBoxCompanyName.SelectedValue);
+                _item.CategoryID = Convert.ToInt32(comboBoxCategoryName.SelectedValue);
+                _item.CompanyID = Convert.ToInt32(comboBoxCompanyName.SelectedValue);
                 _dataTable = _stockOutManager.GetAvailableQuantityAndReorderLevelFromItem(_item);
-                _stockOut.ItemId = Convert.ToInt32(_dataTable.Rows[0]["ID"].ToString());
+                _stockOut.ItemID = Convert.ToInt32(_dataTable.Rows[0]["ID"].ToString());
                 _listStockOut.Add(_stockOut);
                 dataGridViewStockOutAllRecord.DataSource = null;
                 dataGridViewStockOutAllRecord.DataSource = _listStockOut;
@@ -150,8 +150,8 @@ namespace StockManagementSystem.Screens
         private void comboBoxItemName_SelectedIndexChanged(object sender, EventArgs e)
         {
             _item.Name = comboBoxItemName.Text;
-            _item.CategoryId = Convert.ToInt32(comboBoxCategoryName.SelectedValue);
-            _item.CompanyId = Convert.ToInt32(comboBoxCompanyName.SelectedValue);
+            _item.CategoryID = Convert.ToInt32(comboBoxCategoryName.SelectedValue);
+            _item.CompanyID = Convert.ToInt32(comboBoxCompanyName.SelectedValue);
             _dataTable = _stockOutManager.GetAvailableQuantityAndReorderLevelFromItem(_item);
             textBoxReorderLevel.Text = _dataTable.Rows[0]["ReorderLevel"].ToString();
             textBoxAvailableQuantity.Text = _dataTable.Rows[0]["AvailableQuantity"].ToString();
@@ -160,13 +160,13 @@ namespace StockManagementSystem.Screens
         private void StockOutForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'stockManagementDBDataSet6.StockOuts' table. You can move, or remove it, as needed.
-            this.stockOutsTableAdapter1.Fill(this.stockManagementDBDataSet6.StockOuts);
+                   // this.stockOutsTableAdapter1.Fill(this.stockManagementDBDataSet6.StockOuts);
             // TODO: This line of code loads data into the 'stockManagementDBDataSet4.Items' table. You can move, or remove it, as needed.
-            this.itemsTableAdapter.Fill(this.stockManagementDBDataSet4.Items);
+                  //  this.itemsTableAdapter.Fill(this.stockManagementDBDataSet4.Items);
             // TODO: This line of code loads data into the 'stockManagementDBDataSet1.Categories' table. You can move, or remove it, as needed.
-            this.categoriesTableAdapter.Fill(this.stockManagementDBDataSet1.Categories);
+               //  this.categoriesTableAdapter.Fill(this.stockManagementDBDataSet1.Categories);
             // TODO: This line of code loads data into the 'stockManagementDBDataSet.Companies' table. You can move, or remove it, as needed.
-            this.companiesTableAdapter.Fill(this.stockManagementDBDataSet.Companies);
+                // this.companiesTableAdapter.Fill(this.stockManagementDBDataSet.Companies);
             // TODO: This line of code loads data into the 'stockManagementDBDataSet5.StockOuts' table. You can move, or remove it, as needed.
             //this.stockOutsTableAdapter.Fill(this.stockManagementDBDataSet5.StockOuts);
             TextBoxDefaultValue();
@@ -185,9 +185,9 @@ namespace StockManagementSystem.Screens
             {
 
                 _stockOut.Quantity = Convert.ToInt32(row.Cells["quantityDataGridViewTextBoxColumn"].Value.ToString());
-                _stockOut.ItemId = Convert.ToInt32(row.Cells["itemIdDataGridViewTextBoxColumn"].Value.ToString());
+                _stockOut.ItemID = Convert.ToInt32(row.Cells["itemIdDataGridViewTextBoxColumn"].Value.ToString());
                 _stockOut.Action = action;
-                _item.ItemId = _stockOut.ItemId;
+                _item.ID = _stockOut.ItemID;
                 _dataTable = _stockOutManager.GetItemById(_item);
                 int quantity = Convert.ToInt32(_dataTable.Rows[0]["AvailableQuantity"]);
                 quantity -= _stockOut.Quantity;

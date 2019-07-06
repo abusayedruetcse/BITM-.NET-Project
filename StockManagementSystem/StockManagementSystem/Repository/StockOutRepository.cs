@@ -79,7 +79,7 @@ namespace StockManagementSystem.StockManagement.Repository
         }
         public DataTable GetAvailableQuantityAndReorderLevelFromItem(Item item)
         {
-            commandString = @"SELECT * FROM Items WHERE Name='" + item.Name + "' AND CategoryId =" + item.CategoryId + " AND CompanyId=" + item.CompanyId + "";
+            commandString = @"SELECT * FROM Items WHERE Name='" + item.Name + "' AND CategoryId =" + item.CategoryID + " AND CompanyId=" + item.CompanyID + "";
             sqlCommand = new SqlCommand(commandString, sqlConnection);
             sqlConnection.Open();
             sqlDataAdapter = new SqlDataAdapter(sqlCommand);
@@ -91,7 +91,7 @@ namespace StockManagementSystem.StockManagement.Repository
         public int AddStockOut(StockOut stockOut)
         {
             int isExecuted = 0;
-            commandString = @"INSERT INTO StockOuts VALUES('" + stockOut.Date + "'," + stockOut.Quantity + "," + stockOut.ItemId + ",'" + stockOut.Action + "')";
+            commandString = @"INSERT INTO StockOuts VALUES('" + stockOut.Date + "'," + stockOut.Quantity + "," + stockOut.ItemID + ",'" + stockOut.Action + "')";
             sqlCommand = new SqlCommand(commandString, sqlConnection);
 
             sqlConnection.Open();
@@ -102,7 +102,7 @@ namespace StockManagementSystem.StockManagement.Repository
         }
         public DataTable GetItemById(Item item)
         {
-            commandString = @"SELECT * FROM Items WHERE ItemId=" + item.ItemId + "";
+            commandString = @"SELECT * FROM Items WHERE ID=" + item.ID + "";
             sqlCommand = new SqlCommand(commandString, sqlConnection);
             sqlConnection.Open();
             sqlDataAdapter = new SqlDataAdapter(sqlCommand);
@@ -114,7 +114,7 @@ namespace StockManagementSystem.StockManagement.Repository
         public void UpdateItem(Item item)
         {
             int isExecuted = 0;
-            commandString = @"UPDATE Items SET AvailableQuantity=" + item.AvailableQuantity + "  WHERE ItemId=" + item.ItemId + "";
+            commandString = @"UPDATE Items SET AvailableQuantity=" + item.AvailableQuantity + "  WHERE ID=" + item.ID + "";
             sqlCommand = new SqlCommand(commandString, sqlConnection);
 
             sqlConnection.Open();

@@ -110,7 +110,7 @@
             // 
             // categoryBindingSource
             // 
-            this.categoryBindingSource.DataSource = typeof(StockManagementSystem.Models.Category);
+//            this.categoryBindingSource.DataSource = typeof(StockManagementSystem.Models.Category);
             // 
             // companyComboBox
             // 
@@ -126,7 +126,7 @@
             // 
             // companyBindingSource
             // 
-            this.companyBindingSource.DataSource = typeof(StockManagementSystem.Models.Company);
+//            this.companyBindingSource.DataSource = typeof(StockManagementSystem.Models.Company);
             // 
             // itemNameTextBox
             // 

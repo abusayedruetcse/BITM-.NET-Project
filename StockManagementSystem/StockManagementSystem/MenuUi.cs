@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using StockManagementSystem.Screens;
 
 namespace StockManagementSystem
 {
@@ -42,16 +43,16 @@ namespace StockManagementSystem
         private void stockInLabel_Click(object sender, EventArgs e)
         {
             //this.Hide();
-            //StockInUi stockInUi = new StockInUi();
-            //stockInUi.Show();
-            
+            StockInForm stockInUi = new StockInForm();
+            stockInUi.ShowDialog();
+
         }
 
         private void stockOutLabel_Click(object sender, EventArgs e)
         {
             //this.Hide();
-            //StockOutUi stockOutUi = new StockOutUi();
-            //stockOutUi.Show();           
+            StockOutForm stockOutUi = new StockOutForm();
+            stockOutUi.ShowDialog();
         }
 
         private void searchLabel_Click(object sender, EventArgs e)

@@ -60,7 +60,7 @@ namespace StockManagementSystem.StockManagement.Repository
         public int AddtStockIn(StockIn stockIn)
         {
             int isExecuted = 0;
-            commandString = @"INSERT INTO StockIns VALUES('" + stockIn.Date + "'," + stockIn.Quantity + "," + stockIn.ItemId + ")";
+            commandString = @"INSERT INTO StockIns VALUES('" + stockIn.Date + "'," + stockIn.Quantity + "," + stockIn.ItemID + ")";
             sqlCommand = new SqlCommand(commandString, sqlConnection);
 
             sqlConnection.Open();
@@ -72,7 +72,7 @@ namespace StockManagementSystem.StockManagement.Repository
         public void UpdateStockIn(StockIn stockIn)
         {
             int isExecuted = 0;
-            commandString = @"UPDATE StockIns SET Quantity=" + stockIn.Quantity + "  WHERE StockInId=" + stockIn.StockInId + "";
+            commandString = @"UPDATE StockIns SET Quantity=" + stockIn.Quantity + "  WHERE ID=" + stockIn.ID + "";
             sqlCommand = new SqlCommand(commandString, sqlConnection);
 
             sqlConnection.Open();
@@ -104,7 +104,7 @@ namespace StockManagementSystem.StockManagement.Repository
         }
         public DataTable GetItemById(Item item)
         {
-            commandString = @"SELECT * FROM Items WHERE ItemId=" + item.ItemId + "";
+            commandString = @"SELECT * FROM Items WHERE ID=" + item.ID + "";
             sqlCommand = new SqlCommand(commandString, sqlConnection);
             sqlConnection.Open();
             sqlDataAdapter = new SqlDataAdapter(sqlCommand);
@@ -116,7 +116,7 @@ namespace StockManagementSystem.StockManagement.Repository
         public void UpdateAvailableQuantity(Item item)
         {
             int isExecuted = 0;
-            commandString = @"UPDATE Items SET AvailableQuantity=" + item.AvailableQuantity + "  WHERE ItemId=" + item.ItemId + "";
+            commandString = @"UPDATE Items SET AvailableQuantity=" + item.AvailableQuantity + "  WHERE ID=" + item.ID + "";
             sqlCommand = new SqlCommand(commandString, sqlConnection);
 
             sqlConnection.Open();

@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.stockOutsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.stockManagementDBDataSet5 = new StockManagementSystem.StockManagementDBDataSet5();
-            this.stockOutsTableAdapter = new StockManagementSystem.StockManagementDBDataSet5TableAdapters.StockOutsTableAdapter();
+           // this.stockManagementDBDataSet5 = new StockManagementSystem.StockManagementDBDataSet5();
+          //  this.stockOutsTableAdapter = new StockManagementSystem.StockManagementDBDataSet5TableAdapters.StockOutsTableAdapter();
             this.dataGridViewStockOutAllRecord = new System.Windows.Forms.DataGridView();
             this.dateTimePickerStockOut = new System.Windows.Forms.DateTimePicker();
             this.buttonDamage = new System.Windows.Forms.Button();
@@ -50,18 +50,18 @@
             this.label4 = new System.Windows.Forms.Label();
             this.comboBoxCompanyName = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.stockManagementDBDataSet = new StockManagementSystem.StockManagementDBDataSet();
+          //  this.stockManagementDBDataSet = new StockManagementSystem.StockManagementDBDataSet();
             this.companiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.companiesTableAdapter = new StockManagementSystem.StockManagementDBDataSetTableAdapters.CompaniesTableAdapter();
-            this.stockManagementDBDataSet1 = new StockManagementSystem.StockManagementDBDataSet1();
+          //  this.companiesTableAdapter = new StockManagementSystem.StockManagementDBDataSetTableAdapters.CompaniesTableAdapter();
+          //  this.stockManagementDBDataSet1 = new StockManagementSystem.StockManagementDBDataSet1();
             this.categoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.categoriesTableAdapter = new StockManagementSystem.StockManagementDBDataSet1TableAdapters.CategoriesTableAdapter();
-            this.stockManagementDBDataSet4 = new StockManagementSystem.StockManagementDBDataSet4();
+         //   this.categoriesTableAdapter = new StockManagementSystem.StockManagementDBDataSet1TableAdapters.CategoriesTableAdapter();
+         //   this.stockManagementDBDataSet4 = new StockManagementSystem.StockManagementDBDataSet4();
             this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.itemsTableAdapter = new StockManagementSystem.StockManagementDBDataSet4TableAdapters.ItemsTableAdapter();
-            this.stockManagementDBDataSet6 = new StockManagementSystem.StockManagementDBDataSet6();
+          //  this.itemsTableAdapter = new StockManagementSystem.StockManagementDBDataSet4TableAdapters.ItemsTableAdapter();
+         //   this.stockManagementDBDataSet6 = new StockManagementSystem.StockManagementDBDataSet6();
             this.stockOutsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.stockOutsTableAdapter1 = new StockManagementSystem.StockManagementDBDataSet6TableAdapters.StockOutsTableAdapter();
+          //  this.stockOutsTableAdapter1 = new StockManagementSystem.StockManagementDBDataSet6TableAdapters.StockOutsTableAdapter();
             this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.companyNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,31 +71,31 @@
             this.itemIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.actionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.stockOutsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockManagementDBDataSet5)).BeginInit();
+          //  ((System.ComponentModel.ISupportInitialize)(this.stockManagementDBDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStockOutAllRecord)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockManagementDBDataSet)).BeginInit();
+         //   ((System.ComponentModel.ISupportInitialize)(this.stockManagementDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companiesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockManagementDBDataSet1)).BeginInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.stockManagementDBDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockManagementDBDataSet4)).BeginInit();
+          //  ((System.ComponentModel.ISupportInitialize)(this.stockManagementDBDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockManagementDBDataSet6)).BeginInit();
+         //   ((System.ComponentModel.ISupportInitialize)(this.stockManagementDBDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockOutsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // stockOutsBindingSource
             // 
             this.stockOutsBindingSource.DataMember = "StockOuts";
-            this.stockOutsBindingSource.DataSource = this.stockManagementDBDataSet5;
+           // this.stockOutsBindingSource.DataSource = this.stockManagementDBDataSet5;
             // 
             // stockManagementDBDataSet5
             // 
-            this.stockManagementDBDataSet5.DataSetName = "StockManagementDBDataSet5";
-            this.stockManagementDBDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+          //  this.stockManagementDBDataSet5.DataSetName = "StockManagementDBDataSet5";
+           // this.stockManagementDBDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // stockOutsTableAdapter
             // 
-            this.stockOutsTableAdapter.ClearBeforeFill = true;
+         //   this.stockOutsTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewStockOutAllRecord
             // 
@@ -283,59 +283,59 @@
             // 
             // stockManagementDBDataSet
             // 
-            this.stockManagementDBDataSet.DataSetName = "StockManagementDBDataSet";
-            this.stockManagementDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+          //  this.stockManagementDBDataSet.DataSetName = "StockManagementDBDataSet";
+          //  this.stockManagementDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // companiesBindingSource
             // 
             this.companiesBindingSource.DataMember = "Companies";
-            this.companiesBindingSource.DataSource = this.stockManagementDBDataSet;
+           // this.companiesBindingSource.DataSource = this.stockManagementDBDataSet;
             // 
             // companiesTableAdapter
             // 
-            this.companiesTableAdapter.ClearBeforeFill = true;
+          //  this.companiesTableAdapter.ClearBeforeFill = true;
             // 
             // stockManagementDBDataSet1
             // 
-            this.stockManagementDBDataSet1.DataSetName = "StockManagementDBDataSet1";
-            this.stockManagementDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+         //   this.stockManagementDBDataSet1.DataSetName = "StockManagementDBDataSet1";
+          //  this.stockManagementDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // categoriesBindingSource
             // 
             this.categoriesBindingSource.DataMember = "Categories";
-            this.categoriesBindingSource.DataSource = this.stockManagementDBDataSet1;
+           // this.categoriesBindingSource.DataSource = this.stockManagementDBDataSet1;
             // 
             // categoriesTableAdapter
             // 
-            this.categoriesTableAdapter.ClearBeforeFill = true;
+          //  this.categoriesTableAdapter.ClearBeforeFill = true;
             // 
             // stockManagementDBDataSet4
             // 
-            this.stockManagementDBDataSet4.DataSetName = "StockManagementDBDataSet4";
-            this.stockManagementDBDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+         //   this.stockManagementDBDataSet4.DataSetName = "StockManagementDBDataSet4";
+         //   this.stockManagementDBDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // itemsBindingSource
             // 
             this.itemsBindingSource.DataMember = "Items";
-            this.itemsBindingSource.DataSource = this.stockManagementDBDataSet4;
+          //  this.itemsBindingSource.DataSource = this.stockManagementDBDataSet4;
             // 
             // itemsTableAdapter
             // 
-            this.itemsTableAdapter.ClearBeforeFill = true;
+         //   this.itemsTableAdapter.ClearBeforeFill = true;
             // 
             // stockManagementDBDataSet6
             // 
-            this.stockManagementDBDataSet6.DataSetName = "StockManagementDBDataSet6";
-            this.stockManagementDBDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+          //  this.stockManagementDBDataSet6.DataSetName = "StockManagementDBDataSet6";
+          //  this.stockManagementDBDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // stockOutsBindingSource1
             // 
             this.stockOutsBindingSource1.DataMember = "StockOuts";
-            this.stockOutsBindingSource1.DataSource = this.stockManagementDBDataSet6;
+         //   this.stockOutsBindingSource1.DataSource = this.stockManagementDBDataSet6;
             // 
             // stockOutsTableAdapter1
             // 
-            this.stockOutsTableAdapter1.ClearBeforeFill = true;
+         //   this.stockOutsTableAdapter1.ClearBeforeFill = true;
             // 
             // SL
             // 
@@ -427,15 +427,15 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Normal;
             this.Load += new System.EventHandler(this.StockOutForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.stockOutsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockManagementDBDataSet5)).EndInit();
+          //  ((System.ComponentModel.ISupportInitialize)(this.stockManagementDBDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStockOutAllRecord)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockManagementDBDataSet)).EndInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.stockManagementDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.companiesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockManagementDBDataSet1)).EndInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.stockManagementDBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockManagementDBDataSet4)).EndInit();
+          //  ((System.ComponentModel.ISupportInitialize)(this.stockManagementDBDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockManagementDBDataSet6)).EndInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.stockManagementDBDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockOutsBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -462,21 +462,21 @@
         private System.Windows.Forms.Button buttonSell;
         private System.Windows.Forms.Button buttonLost;
         private System.Windows.Forms.Button buttonDamage;
-        private StockManagementDBDataSet5 stockManagementDBDataSet5;
+      //  private StockManagementDBDataSet5 stockManagementDBDataSet5;
         private System.Windows.Forms.BindingSource stockOutsBindingSource;
-        private StockManagementDBDataSet5TableAdapters.StockOutsTableAdapter stockOutsTableAdapter;
-        private StockManagementDBDataSet stockManagementDBDataSet;
+     //   private StockManagementDBDataSet5TableAdapters.StockOutsTableAdapter stockOutsTableAdapter;
+      //  private StockManagementDBDataSet stockManagementDBDataSet;
         private System.Windows.Forms.BindingSource companiesBindingSource;
-        private StockManagementDBDataSetTableAdapters.CompaniesTableAdapter companiesTableAdapter;
-        private StockManagementDBDataSet1 stockManagementDBDataSet1;
+      //  private StockManagementDBDataSetTableAdapters.CompaniesTableAdapter companiesTableAdapter;
+      //  private StockManagementDBDataSet1 stockManagementDBDataSet1;
         private System.Windows.Forms.BindingSource categoriesBindingSource;
-        private StockManagementDBDataSet1TableAdapters.CategoriesTableAdapter categoriesTableAdapter;
-        private StockManagementDBDataSet4 stockManagementDBDataSet4;
+      //  private StockManagementDBDataSet1TableAdapters.CategoriesTableAdapter categoriesTableAdapter;
+      //  private StockManagementDBDataSet4 stockManagementDBDataSet4;
         private System.Windows.Forms.BindingSource itemsBindingSource;
-        private StockManagementDBDataSet4TableAdapters.ItemsTableAdapter itemsTableAdapter;
-        private StockManagementDBDataSet6 stockManagementDBDataSet6;
+      //  private StockManagementDBDataSet4TableAdapters.ItemsTableAdapter itemsTableAdapter;
+     //   private StockManagementDBDataSet6 stockManagementDBDataSet6;
         private System.Windows.Forms.BindingSource stockOutsBindingSource1;
-        private StockManagementDBDataSet6TableAdapters.StockOutsTableAdapter stockOutsTableAdapter1;
+      //  private StockManagementDBDataSet6TableAdapters.StockOutsTableAdapter stockOutsTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn SL;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn companyNameDataGridViewTextBoxColumn;

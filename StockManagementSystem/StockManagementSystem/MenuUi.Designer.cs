@@ -40,10 +40,10 @@
             // categorySetupLabel
             // 
             this.categorySetupLabel.AutoSize = true;
-            this.categorySetupLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categorySetupLabel.Location = new System.Drawing.Point(177, 48);
+            this.categorySetupLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categorySetupLabel.Location = new System.Drawing.Point(590, 147);
             this.categorySetupLabel.Name = "categorySetupLabel";
-            this.categorySetupLabel.Size = new System.Drawing.Size(101, 16);
+            this.categorySetupLabel.Size = new System.Drawing.Size(203, 31);
             this.categorySetupLabel.TabIndex = 14;
             this.categorySetupLabel.Text = "Category Setup";
             this.categorySetupLabel.Click += new System.EventHandler(this.categorySetupLabel_Click);
@@ -51,10 +51,10 @@
             // companySetupLabel
             // 
             this.companySetupLabel.AutoSize = true;
-            this.companySetupLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.companySetupLabel.Location = new System.Drawing.Point(177, 101);
+            this.companySetupLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.companySetupLabel.Location = new System.Drawing.Point(587, 232);
             this.companySetupLabel.Name = "companySetupLabel";
-            this.companySetupLabel.Size = new System.Drawing.Size(104, 16);
+            this.companySetupLabel.Size = new System.Drawing.Size(208, 31);
             this.companySetupLabel.TabIndex = 15;
             this.companySetupLabel.Text = "Company Setup";
             this.companySetupLabel.Click += new System.EventHandler(this.companySetupLabel_Click);
@@ -62,10 +62,10 @@
             // itemSetupLabel
             // 
             this.itemSetupLabel.AutoSize = true;
-            this.itemSetupLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itemSetupLabel.Location = new System.Drawing.Point(177, 155);
+            this.itemSetupLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.itemSetupLabel.Location = new System.Drawing.Point(619, 311);
             this.itemSetupLabel.Name = "itemSetupLabel";
-            this.itemSetupLabel.Size = new System.Drawing.Size(71, 16);
+            this.itemSetupLabel.Size = new System.Drawing.Size(145, 31);
             this.itemSetupLabel.TabIndex = 16;
             this.itemSetupLabel.Text = "Item Setup";
             this.itemSetupLabel.Click += new System.EventHandler(this.itemSetupLabel_Click);
@@ -73,10 +73,10 @@
             // stockInLabel
             // 
             this.stockInLabel.AutoSize = true;
-            this.stockInLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stockInLabel.Location = new System.Drawing.Point(177, 211);
+            this.stockInLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stockInLabel.Location = new System.Drawing.Point(635, 389);
             this.stockInLabel.Name = "stockInLabel";
-            this.stockInLabel.Size = new System.Drawing.Size(55, 16);
+            this.stockInLabel.Size = new System.Drawing.Size(113, 31);
             this.stockInLabel.TabIndex = 17;
             this.stockInLabel.Text = "Stock In";
             this.stockInLabel.Click += new System.EventHandler(this.stockInLabel_Click);
@@ -84,10 +84,10 @@
             // stockOutLabel
             // 
             this.stockOutLabel.AutoSize = true;
-            this.stockOutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stockOutLabel.Location = new System.Drawing.Point(177, 264);
+            this.stockOutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stockOutLabel.Location = new System.Drawing.Point(624, 454);
             this.stockOutLabel.Name = "stockOutLabel";
-            this.stockOutLabel.Size = new System.Drawing.Size(65, 16);
+            this.stockOutLabel.Size = new System.Drawing.Size(134, 31);
             this.stockOutLabel.TabIndex = 18;
             this.stockOutLabel.Text = "Stock Out";
             this.stockOutLabel.Click += new System.EventHandler(this.stockOutLabel_Click);
@@ -95,10 +95,10 @@
             // searchLabel
             // 
             this.searchLabel.AutoSize = true;
-            this.searchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchLabel.Location = new System.Drawing.Point(177, 308);
+            this.searchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchLabel.Location = new System.Drawing.Point(510, 512);
             this.searchLabel.Name = "searchLabel";
-            this.searchLabel.Size = new System.Drawing.Size(178, 16);
+            this.searchLabel.Size = new System.Drawing.Size(362, 31);
             this.searchLabel.TabIndex = 19;
             this.searchLabel.Text = "Search View Items Summary";
             this.searchLabel.Click += new System.EventHandler(this.searchLabel_Click);
@@ -106,10 +106,10 @@
             // viewLabel
             // 
             this.viewLabel.AutoSize = true;
-            this.viewLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewLabel.Location = new System.Drawing.Point(177, 349);
+            this.viewLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewLabel.Location = new System.Drawing.Point(485, 570);
             this.viewLabel.Name = "viewLabel";
-            this.viewLabel.Size = new System.Drawing.Size(204, 16);
+            this.viewLabel.Size = new System.Drawing.Size(413, 31);
             this.viewLabel.TabIndex = 20;
             this.viewLabel.Text = "View Between Two Dates Report";
             this.viewLabel.Click += new System.EventHandler(this.viewLabel_Click);
@@ -118,7 +118,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(599, 470);
+            this.ClientSize = new System.Drawing.Size(1572, 808);
             this.Controls.Add(this.viewLabel);
             this.Controls.Add(this.searchLabel);
             this.Controls.Add(this.stockOutLabel);
@@ -128,6 +128,7 @@
             this.Controls.Add(this.categorySetupLabel);
             this.Name = "MenuUi";
             this.Text = "Menu List";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 
