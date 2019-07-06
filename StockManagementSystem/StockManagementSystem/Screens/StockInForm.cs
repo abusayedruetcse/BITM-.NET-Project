@@ -29,6 +29,8 @@ namespace StockManagementSystem.Screens
 
         private void StockInForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'stockManagementDBDataSet.StockIns' table. You can move, or remove it, as needed.
+            this.stockInsTableAdapter.Fill(this.stockManagementDBDataSet.StockIns);
             // TODO: This line of code loads data into the 'stockManagementDBDataSet4.Items' table. You can move, or remove it, as needed.
             //this.itemsTableAdapter.Fill(this.stockManagementDBDataSet4.Items);
             // TODO: This line of code loads data into the 'stockManagementDBDataSet3.StockIns' table. You can move, or remove it, as needed.
@@ -205,14 +207,14 @@ namespace StockManagementSystem.Screens
         private void dataGridViewStockInAllRecord_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int currentQuantity = Convert.ToInt32(dataGridViewStockInAllRecord.Rows[e.RowIndex].Cells["quantityDataGridViewTextBoxColumn"].Value);
-            _item.ID = Convert.ToInt32(dataGridViewStockInAllRecord.Rows[e.RowIndex].Cells["iDDataGridViewTextBoxColumn"].Value);
+            _item.ID = Convert.ToInt32(dataGridViewStockInAllRecord.Rows[e.RowIndex].Cells["itemIDDataGridViewTextBoxColumn"].Value);
             _dataTable = _stockInManager.GetItemById(_item);
 
             //display into textbox
             if (_dataTable.Rows.Count > 0)
             {
-                comboBoxCompanyName.SelectedValue = _dataTable.Rows[0]["CompanyId"];
-                comboBoxCategoryName.SelectedValue = _dataTable.Rows[0]["CategoryId"];
+                comboBoxCompanyName.SelectedValue = _dataTable.Rows[0]["CompanyID"];
+                comboBoxCategoryName.SelectedValue = _dataTable.Rows[0]["CategoryID"];
                 comboBoxItemName.Text = _dataTable.Rows[0]["Name"].ToString();
                 textBoxReorderLevel.Text = _dataTable.Rows[0]["ReorderLevel"].ToString();
                 textBoxAvailableQuantity.Text = _dataTable.Rows[0]["AvailableQuantity"].ToString();

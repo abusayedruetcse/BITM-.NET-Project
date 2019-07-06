@@ -102,6 +102,11 @@
     <Compile Include="Screens\Templates\TemplateForm.Designer.cs">
       <DependentUpon>TemplateForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="StockManagementDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockManagementDBDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CategoryUi.resx">
       <DependentUpon>CategoryUi.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +156,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="StockManagementDBDataSet.xsc">
+      <DependentUpon>StockManagementDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="StockManagementDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StockManagementDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StockManagementDBDataSet.xss">
+      <DependentUpon>StockManagementDBDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
