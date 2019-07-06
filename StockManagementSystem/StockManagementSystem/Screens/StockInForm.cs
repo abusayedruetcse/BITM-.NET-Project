@@ -13,7 +13,7 @@ using StockManagementSystem.StockManagement.Bll;
 
 namespace StockManagementSystem.Screens
 {
-    public partial class StockInForm : Form
+    public partial class StockInForm : TemplateForm
     {
         private StockInManager _stockInManager;
         private StockIn _stockIn;
@@ -205,7 +205,7 @@ namespace StockManagementSystem.Screens
         private void dataGridViewStockInAllRecord_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int currentQuantity = Convert.ToInt32(dataGridViewStockInAllRecord.Rows[e.RowIndex].Cells["quantityDataGridViewTextBoxColumn"].Value);
-            _item.ID = Convert.ToInt32(dataGridViewStockInAllRecord.Rows[e.RowIndex].Cells["itemIdDataGridViewTextBoxColumn"].Value);
+            _item.ID = Convert.ToInt32(dataGridViewStockInAllRecord.Rows[e.RowIndex].Cells["iDDataGridViewTextBoxColumn"].Value);
             _dataTable = _stockInManager.GetItemById(_item);
 
             //display into textbox

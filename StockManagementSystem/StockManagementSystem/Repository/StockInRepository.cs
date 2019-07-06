@@ -20,6 +20,7 @@ namespace StockManagementSystem.StockManagement.Repository
         public StockInRepository()
         {
             connectionString = @"Server=(local)\SQLEXPRESS; Database=StockManagementDB  ;Integrated Security=True  ";
+
             sqlConnection = new SqlConnection(connectionString);
         }
         public DataTable CompanyDataBindToCombobox()
@@ -48,7 +49,7 @@ namespace StockManagementSystem.StockManagement.Repository
 
         public DataTable ItemDataBindToComboboxByFiltering(int categoryId, int companyId)
         {
-            commandString = @"SELECT * FROM Items WHERE CategoryId =" + categoryId + " AND CompanyId=" + companyId + "";
+            commandString = @"SELECT * FROM Items WHERE CategoryID =" + categoryId + " AND CompanyID=" + companyId + "";
             sqlCommand = new SqlCommand(commandString, sqlConnection);
             sqlConnection.Open();
             sqlDataAdapter = new SqlDataAdapter(sqlCommand);
@@ -82,7 +83,7 @@ namespace StockManagementSystem.StockManagement.Repository
         }
         public DataTable DisplayAllRecords()
         {
-            commandString = @"SELECT s.StockInId AS ID,s.ItemId, Name AS ItemName,Date,Quantity FROM StockIns AS s LEFT OUTER JOIN Items AS i ON s.ItemId=i.ItemId ORDER BY s.Date DESC";
+            commandString = @"SELECT s.ID AS ID,s.ItemID, Name AS ItemName,Date,Quantity FROM StockIns AS s LEFT OUTER JOIN Items AS i ON s.ItemID=i.ID ORDER BY s.Date DESC";
             sqlCommand = new SqlCommand(commandString, sqlConnection);
             sqlConnection.Open();
             sqlDataAdapter = new SqlDataAdapter(sqlCommand);

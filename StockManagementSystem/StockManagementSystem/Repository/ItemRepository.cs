@@ -22,7 +22,8 @@ namespace StockManagementSystem.Repository
 
         public ItemRepository()
         {
-            connectionString = @"Server=DESKTOP-AAHS936\SQLEXPRESS ; Database=StockManagementDB  ;Integrated Security=True  ";
+            //connectionString = @"Server=DESKTOP-AAHS936\SQLEXPRESS ; Database=StockManagementDB  ;Integrated Security=True  ";
+            connectionString = @"Server=(local)\SQLEXPRESS; Database=StockManagementDB; Integrated Security=True";
             //connectionString = @"Server=TUHIN-PC\SQLEXPRESS ; Database=StockManagementDB;Integrated Security=True";
             //connectionString = @"Server=DESKTOP-MPA65J0\SQLEXPRESS;Database=StockManagementDB;Integrated Security=True";
             sqlConnection = new SqlConnection(connectionString);

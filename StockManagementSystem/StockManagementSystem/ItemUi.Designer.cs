@@ -108,10 +108,6 @@
             this.categoryComboBox.ValueMember = "ID";
             this.categoryComboBox.Click += new System.EventHandler(this.categoryComboBox_Click);
             // 
-            // categoryBindingSource
-            // 
-//            this.categoryBindingSource.DataSource = typeof(StockManagementSystem.Models.Category);
-            // 
             // companyComboBox
             // 
             this.companyComboBox.DataSource = this.companyBindingSource;
@@ -123,10 +119,6 @@
             this.companyComboBox.TabIndex = 6;
             this.companyComboBox.ValueMember = "ID";
             this.companyComboBox.Click += new System.EventHandler(this.companyComboBox_Click);
-            // 
-            // companyBindingSource
-            // 
-//            this.companyBindingSource.DataSource = typeof(StockManagementSystem.Models.Company);
             // 
             // itemNameTextBox
             // 
@@ -166,6 +158,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.saveButton);
             this.Name = "ItemUi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Item Setup";
             ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).EndInit();
