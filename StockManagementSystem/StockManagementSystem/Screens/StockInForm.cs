@@ -102,7 +102,7 @@ namespace StockManagementSystem.Screens
                         return;
                     }
                     _stockIn.Date = dateTimePickerUserDefineDate.Value.ToString("yyyy-MM-dd");
-                    _stockIn.ID = Convert.ToInt32(comboBoxItemName.SelectedValue);
+                    _stockIn.ItemID = Convert.ToInt32(comboBoxItemName.SelectedValue);
                     if (String.IsNullOrEmpty(textBoxStockInQuantity.Text))
                     {
                         MessageBox.Show("Enter a quantity!");
@@ -206,8 +206,8 @@ namespace StockManagementSystem.Screens
 
         private void dataGridViewStockInAllRecord_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int currentQuantity = Convert.ToInt32(dataGridViewStockInAllRecord.Rows[e.RowIndex].Cells["quantityDataGridViewTextBoxColumn"].Value);
-            _item.ID = Convert.ToInt32(dataGridViewStockInAllRecord.Rows[e.RowIndex].Cells["itemIDDataGridViewTextBoxColumn"].Value);
+            int currentQuantity = Convert.ToInt32(dataGridViewStockInAllRecord.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn2"].Value);
+            _item.ID = Convert.ToInt32(dataGridViewStockInAllRecord.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn3"].Value);
             _dataTable = _stockInManager.GetItemById(_item);
 
             //display into textbox
@@ -227,7 +227,7 @@ namespace StockManagementSystem.Screens
             _item.AvailableQuantity -= currentQuantity; //reduce currentQuantity
 
             //updating for StockIn
-            _stockIn.ID = Convert.ToInt32(dataGridViewStockInAllRecord.Rows[e.RowIndex].Cells["stockInIdDataGridViewTextBoxColumn"].Value);
+            _stockIn.ID = Convert.ToInt32(dataGridViewStockInAllRecord.Rows[e.RowIndex].Cells["iDDataGridViewTextBoxColumn"].Value);
         }
     }
 }
