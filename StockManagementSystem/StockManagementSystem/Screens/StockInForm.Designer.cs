@@ -38,13 +38,8 @@
             this.dataGridViewStockInAllRecord = new System.Windows.Forms.DataGridView();
             this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Action = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stockInsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            //this.stockManagementDBDataSet = new StockManagementSystem.StockManagementDBDataSet();
             this.stockOutBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.stockInsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
@@ -62,7 +57,6 @@
             this.textBoxStockInQuantity = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.dateTimePickerUserDefineDate = new System.Windows.Forms.DateTimePicker();
-            //this.stockInsTableAdapter = new StockManagementSystem.StockManagementDBDataSetTableAdapters.StockInsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companiesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStockInAllRecord)).BeginInit();
@@ -132,11 +126,7 @@
             this.dataGridViewStockInAllRecord.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SL,
             this.ItemName,
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.Action,
-            this.iDDataGridViewTextBoxColumn,
-            this.dataGridViewTextBoxColumn3});
+            this.Action});
             this.dataGridViewStockInAllRecord.DataSource = this.stockInsBindingSource1;
             this.dataGridViewStockInAllRecord.Location = new System.Drawing.Point(641, 60);
             this.dataGridViewStockInAllRecord.Name = "dataGridViewStockInAllRecord";
@@ -161,21 +151,6 @@
             this.ItemName.Name = "ItemName";
             this.ItemName.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Date";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Date";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Quantity";
-            this.dataGridViewTextBoxColumn2.FillWeight = 105.4644F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Quantity";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
             // Action
             // 
             this.Action.DataPropertyName = "Action";
@@ -185,31 +160,9 @@
             this.Action.ReadOnly = true;
             this.Action.Text = "Edit";
             // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "ItemID";
-            this.dataGridViewTextBoxColumn3.HeaderText = "ItemID";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Visible = false;
-            // 
             // stockInsBindingSource1
             // 
             this.stockInsBindingSource1.DataMember = "StockIns";
-            //this.stockInsBindingSource1.DataSource = this.stockManagementDBDataSet;
-            // 
-            // stockManagementDBDataSet
-            // 
-            //this.stockManagementDBDataSet.DataSetName = "StockManagementDBDataSet";
-            //this.stockManagementDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // stockOutBindingSource
             // 
@@ -338,10 +291,6 @@
             this.dateTimePickerUserDefineDate.Size = new System.Drawing.Size(131, 23);
             this.dateTimePickerUserDefineDate.TabIndex = 5;
             // 
-            // stockInsTableAdapter
-            // 
-            //this.stockInsTableAdapter.ClearBeforeFill = true;
-            // 
             // StockInForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -374,7 +323,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.companiesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStockInAllRecord)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockInsBindingSource1)).EndInit();
-         
             ((System.ComponentModel.ISupportInitialize)(this.stockOutBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockInsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();

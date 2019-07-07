@@ -1,11 +1,59 @@
 .CREATE DATABASE StockManagementDB
---DROP DATABASE StockManagementDB
 USE StockManagementDB
+CREATE TABLE UserAccount 
+(
+ID int IDENTITY(1,1),
+Email VARCHAR(35),
+UserName VARCHAR(35),
+Password VARCHAR(35),
+)
+
 CREATE TABLE Categories
 (
 ID int IDENTITY(1,1),
 Name VARCHAR(25)
 )
+CREATE TABLE Companies
+(
+ID int IDENTITY(1,1),
+Name VARCHAR(25)
+)
+CREATE TABLE Items
+(
+ID int IDENTITY(1,1),
+Name VARCHAR(25),
+CategoryID int,
+CompanyID int,
+ReorderLevel int,
+AvailableQuantity int
+)
+CREATE TABLE StockIns
+(
+ID int IDENTITY(1,1),
+Date VARCHAR(10),
+Quantity int,
+ItemID int
+)
+CREATE TABLE StockOuts
+(
+ID int IDENTITY(1,1),
+Date VARCHAR(20),
+Quantity int,
+ItemID int,
+Action VARCHAR(7)
+)
+CREATE TABLE InsertUpdateHistory 
+(
+UserID int,
+TableName VARCHAR(20),
+TableRowNo int,
+Element VARCHAR(30),
+DateAndTime VARCHAR(25)
+)
+
+
+--DROP DATABASE StockManagementDB
+
 -- DROP TABLE Categories
 INSERT INTO Categories (Name)
 VALUES ('Stationary')
@@ -18,26 +66,14 @@ UPDATE Categories
 SET Name= 'Jamil'
 WHERE SL= 3
 
-CREATE TABLE Companies
-(
-ID int IDENTITY(1,1),
-Name VARCHAR(25)
-)
+
 -- DROP TABLE Companies
 DELETE Companies
 WHERE ID=5
 
 SELECT * FROM Companies
 
-CREATE TABLE Items
-(
-ID int IDENTITY(1,1),
-Name VARCHAR(25),
-CategoryID int,
-CompanyID int,
-ReorderLevel int,
-AvailableQuantity int
-)
+
 -- DROP TABLE Items
 SELECT ID FROM Items WHERE Name='' AND CategoryID = AND CompanyID=
 SELECT * FROM Items
@@ -47,25 +83,12 @@ SELECT i.Name AS Name,com.Name AS Company,cat.Name AS Category,AvailableQuantity
 
 UPDATE Items SET AvailableQuantity=  WHERE ID=
 
-CREATE TABLE StockIns
-(
-ID int IDENTITY(1,1),
-Date VARCHAR(10),
-Quantity int,
-ItemID int
-)
+
 -- DROP TABLE StockIns
 SELECT * FROM StockIns
 SELECT Name,Date,Quantity FROM StockIns AS s LEFT OUTER JOIN Items AS i ON s.ItemID=i.ID ORDER BY s.Date DESC 
 
-CREATE TABLE StockOuts
-(
-ID int IDENTITY(1,1),
-Date VARCHAR(20),
-Quantity int,
-ItemID int,
-Action VARCHAR(7)
-)
+
 
 -- DROP TABLE StockOuts
 SELECT * FROM StockOuts
