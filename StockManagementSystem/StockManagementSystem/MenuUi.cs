@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using StockManagementSystem.Screens;
-
 namespace StockManagementSystem
 {
     public partial class MenuUi : Form
@@ -44,30 +43,39 @@ namespace StockManagementSystem
         {
             //this.Hide();
             StockInForm stockInUi = new StockInForm();
-            stockInUi.ShowDialog();
-
+            stockInUi.Show();
+            
         }
 
         private void stockOutLabel_Click(object sender, EventArgs e)
         {
             //this.Hide();
             StockOutForm stockOutUi = new StockOutForm();
-            stockOutUi.ShowDialog();
+            stockOutUi.Show();           
         }
 
         private void searchLabel_Click(object sender, EventArgs e)
         {
             //this.Hide();
-            //SearchUi searchUi = new SearchUi();
-            //searchUi.Show();
+            SearchUi searchUi = new SearchUi();
+            searchUi.Show();
             
         }
 
         private void viewLabel_Click(object sender, EventArgs e)
         {
             //this.Hide();
-            //ViewUi viewUi = new ViewUi();
-            //viewUi.Show();
+            ViewUi viewUi = new ViewUi();
+            viewUi.Show();
         }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrontUi frontUi = new FrontUi();
+            frontUi.Show();
+        }
+
+       
     }
 }

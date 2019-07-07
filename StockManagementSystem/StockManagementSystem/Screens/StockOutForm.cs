@@ -179,30 +179,39 @@ namespace StockManagementSystem.Screens
 
         private void UpdateStockOut(string action)
         {
-            _stockOut = new StockOut();
-            _stockOut.Date = dateTimePickerStockOut.Value.ToString("yyyy-MM-dd");
-            foreach (DataGridViewRow row in dataGridViewStockOutAllRecord.Rows)
+            try
             {
-
-                _stockOut.Quantity = Convert.ToInt32(row.Cells["quantityDataGridViewTextBoxColumn"].Value.ToString());
-                _stockOut.ItemID = Convert.ToInt32(row.Cells["itemIdDataGridViewTextBoxColumn"].Value.ToString());
-                _stockOut.Action = action;
-                _item.ID = _stockOut.ItemID;
-                _dataTable = _stockOutManager.GetItemById(_item);
-                int quantity = Convert.ToInt32(_dataTable.Rows[0]["AvailableQuantity"]);
-                quantity -= _stockOut.Quantity;
-                _item.AvailableQuantity = quantity;
-                _stockOutManager.UpdateItem(_item);
-                int isUpdated = 0;
-                isUpdated = _stockOutManager.AddStockOut(_stockOut);
-                if (isUpdated > 0)
+                _stockOut = new StockOut();
+                _stockOut.Date = dateTimePickerStockOut.Value.ToString("yyyy-MM-dd");
+                foreach (DataGridViewRow row in dataGridViewStockOutAllRecord.Rows)
                 {
-                   MessageBox.Show("Item: " + comboBoxItemName.Text + " Saved");
+
+                    _stockOut.Quantity = Convert.ToInt32(row.Cells["quantityDataGridViewTextBoxColumn"].Value.ToString());
+                    _stockOut.ItemID = Convert.ToInt32(row.Cells["itemIdDataGridViewTextBoxColumn"].Value.ToString());
+                    _stockOut.Action = action;
+                    _item.ID = _stockOut.ItemID;
+                    _dataTable = _stockOutManager.GetItemById(_item);
+                    int quantity = Convert.ToInt32(_dataTable.Rows[0]["AvailableQuantity"]);
+                    quantity -= _stockOut.Quantity;
+                    _item.AvailableQuantity = quantity;
+                    _stockOutManager.UpdateItem(_item);
+                    int isUpdated = 0;
+                    isUpdated = _stockOutManager.AddStockOut(_stockOut);
+                    if (isUpdated > 0)
+                    {
+                        MessageBox.Show("Item: " + comboBoxItemName.Text + " Saved");
+                    }
                 }
+                _listStockOut = new List<StockOut>();
+                dataGridViewStockOutAllRecord.DataSource = null;
+                dataGridViewStockOutAllRecord.DataSource = _listStockOut;
+
             }
-            _listStockOut = new List<StockOut>();
-            dataGridViewStockOutAllRecord.DataSource = null;
-            dataGridViewStockOutAllRecord.DataSource = _listStockOut;
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return;
+            }
         }
 
         private void buttonLost_Click(object sender, EventArgs e)

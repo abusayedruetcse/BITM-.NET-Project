@@ -30,7 +30,7 @@ namespace StockManagementSystem.Screens
         private void StockInForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'stockManagementDBDataSet.StockIns' table. You can move, or remove it, as needed.
-            this.stockInsTableAdapter.Fill(this.stockManagementDBDataSet.StockIns);
+            //this.stockInsTableAdapter.Fill(this.stockManagementDBDataSet.StockIns);
             // TODO: This line of code loads data into the 'stockManagementDBDataSet4.Items' table. You can move, or remove it, as needed.
             //this.itemsTableAdapter.Fill(this.stockManagementDBDataSet4.Items);
             // TODO: This line of code loads data into the 'stockManagementDBDataSet3.StockIns' table. You can move, or remove it, as needed.

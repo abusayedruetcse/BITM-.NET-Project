@@ -44,7 +44,7 @@
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stockInsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.stockManagementDBDataSet = new StockManagementSystem.StockManagementDBDataSet();
+            //this.stockManagementDBDataSet = new StockManagementSystem.StockManagementDBDataSet();
             this.stockOutBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.stockInsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
@@ -62,12 +62,11 @@
             this.textBoxStockInQuantity = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.dateTimePickerUserDefineDate = new System.Windows.Forms.DateTimePicker();
-            this.stockInsTableAdapter = new StockManagementSystem.StockManagementDBDataSetTableAdapters.StockInsTableAdapter();
+            //this.stockInsTableAdapter = new StockManagementSystem.StockManagementDBDataSetTableAdapters.StockInsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companiesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStockInAllRecord)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockInsBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockManagementDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockOutBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockInsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
@@ -205,12 +204,12 @@
             // stockInsBindingSource1
             // 
             this.stockInsBindingSource1.DataMember = "StockIns";
-            this.stockInsBindingSource1.DataSource = this.stockManagementDBDataSet;
+            //this.stockInsBindingSource1.DataSource = this.stockManagementDBDataSet;
             // 
             // stockManagementDBDataSet
             // 
-            this.stockManagementDBDataSet.DataSetName = "StockManagementDBDataSet";
-            this.stockManagementDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.stockManagementDBDataSet.DataSetName = "StockManagementDBDataSet";
+            //this.stockManagementDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // stockOutBindingSource
             // 
@@ -341,7 +340,7 @@
             // 
             // stockInsTableAdapter
             // 
-            this.stockInsTableAdapter.ClearBeforeFill = true;
+            //this.stockInsTableAdapter.ClearBeforeFill = true;
             // 
             // StockInForm
             // 
@@ -375,7 +374,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.companiesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStockInAllRecord)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockInsBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockManagementDBDataSet)).EndInit();
+         
             ((System.ComponentModel.ISupportInitialize)(this.stockOutBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockInsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
@@ -423,9 +422,7 @@
         private System.Windows.Forms.BindingSource categoryBindingSource;
         private System.Windows.Forms.BindingSource itemBindingSource;
         private System.Windows.Forms.BindingSource stockOutBindingSource;
-        private StockManagementDBDataSet stockManagementDBDataSet;
         private System.Windows.Forms.BindingSource stockInsBindingSource1;
-        private StockManagementDBDataSetTableAdapters.StockInsTableAdapter stockInsTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn SL;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;

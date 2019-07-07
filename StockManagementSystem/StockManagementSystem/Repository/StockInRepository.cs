@@ -19,7 +19,7 @@ namespace StockManagementSystem.StockManagement.Repository
         DataTable dataTable;
         public StockInRepository()
         {
-            connectionString = @"Server=(local)\SQLEXPRESS; Database=StockManagementDB  ;Integrated Security=True  ";
+            connectionString = @"Server=DESKTOP-AAHS936\SQLEXPRESS; Database=StockManagementDB  ;Integrated Security=True  ";
 
             sqlConnection = new SqlConnection(connectionString);
         }
