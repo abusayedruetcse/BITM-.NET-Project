@@ -1,11 +1,12 @@
-.CREATE DATABASE StockManagementDB
+
+CREATE DATABASE StockManagementDB
 USE StockManagementDB
 CREATE TABLE UserAccount 
 (
 ID int IDENTITY(1,1),
 Email VARCHAR(35),
 UserName VARCHAR(35),
-Password VARCHAR(35),
+Password VARCHAR(35)
 )
 
 CREATE TABLE Categories
