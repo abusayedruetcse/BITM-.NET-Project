@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,15 +42,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\CustomerRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\POSManagement.Models\POSManagement.Models.csproj">
       <Project>{bc963d4b-8fe8-4d94-b034-cc00a32ac2b5}</Project>
       <Name>POSManagement.Models</Name>
     </ProjectReference>
+    <ProjectReference Include="..\POSManagementApp.DatabaseContext\POSManagementApp.DatabaseContext.csproj">
+      <Project>{0d6f869c-c3a4-42b1-af2b-b16649fdc47f}</Project>
+      <Name>POSManagementApp.DatabaseContext</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Repository\" />
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
