@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace POSManagementApp.DatabaseContext.DatabaseContext
 {
-    class SBMSystemDb
+    public class SBMSystemDb
     {
+
     }
 }
