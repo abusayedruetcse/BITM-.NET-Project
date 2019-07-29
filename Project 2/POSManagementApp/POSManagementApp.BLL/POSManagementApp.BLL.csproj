@@ -41,10 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\CustomerManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="BLL\" />
+    <ProjectReference Include="..\POSManagement.Models\POSManagement.Models.csproj">
+      <Project>{BC963D4B-8FE8-4D94-B034-CC00A32AC2B5}</Project>
+      <Name>POSManagement.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\POSManagement.Repository\POSManagement.Repository.csproj">
+      <Project>{68507F8B-DDF0-46DC-B57B-53C5AC6F1DC3}</Project>
+      <Name>POSManagement.Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

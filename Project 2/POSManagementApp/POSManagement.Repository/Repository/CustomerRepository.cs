@@ -1,4 +1,5 @@
-﻿using POSManagementApp.DatabaseContext.DatabaseContext;
+﻿using POSManagement.Models.Models;
+using POSManagementApp.DatabaseContext.DatabaseContext;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ namespace POSManagement.Repository.Repository
     public class CustomerRepository
     {
         SBMSystemDb db;
+        Customer _customer;
         public CustomerRepository()
         {
             db = new SBMSystemDb();
