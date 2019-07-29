@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FE558BD1-369B-4A06-BE9B-9D280B3EBC5D}</ProjectGuid>
+    <ProjectGuid>{283C53C0-C6E8-4B7D-AEDD-34F4E222B431}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>POSManagementApp.BLL</RootNamespace>
@@ -44,16 +44,16 @@
     <Compile Include="BLL\CustomerManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\POSManagement.Models\POSManagement.Models.csproj">
-      <Project>{BC963D4B-8FE8-4D94-B034-CC00A32AC2B5}</Project>
+      <Project>{bc963d4b-8fe8-4d94-b034-cc00a32ac2b5}</Project>
       <Name>POSManagement.Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\POSManagement.Repository\POSManagement.Repository.csproj">
-      <Project>{68507F8B-DDF0-46DC-B57B-53C5AC6F1DC3}</Project>
+      <Project>{68507f8b-ddf0-46dc-b57b-53c5ac6f1dc3}</Project>
       <Name>POSManagement.Repository</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

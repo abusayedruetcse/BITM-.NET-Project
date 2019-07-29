@@ -380,7 +380,7 @@
       <Name>POSManagement.Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\POSManagementApp.BLL\POSManagementApp.BLL.csproj">
-      <Project>{fe558bd1-369b-4a06-be9b-9d280b3ebc5d}</Project>
+      <Project>{283c53c0-c6e8-4b7d-aedd-34f4e222b431}</Project>
       <Name>POSManagementApp.BLL</Name>
     </ProjectReference>
   </ItemGroup>
